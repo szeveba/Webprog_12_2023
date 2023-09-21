@@ -5,8 +5,306 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables</title>
+    <style>
+        body {
+            background: #424242;
+        }
+        h1 {
+            color: white;
+        }
+        div.alfejezet {
+            background: wheat;
+        }
+        div.alfejezet>section{
+            background: white;
+        }
+        h1, h2, h3 {
+            margin: 5px;
+        }
+        table {
+            margin: 5px auto 5px auto;
+        }
+        section, .alfejezet{
+            border: 2px solid black;
+            margin: 5px;
+        }
+        
+        section>h3 {
+            text-align: center;
+        }
+        .keret{
+            border: 1px solid darkslategray;
+        }
+        .cellakeretezett td, th{
+            border: 1px solid darkslategray;
+        }
+        .egyvonalas {
+            border-collapse: collapse;
+        }
+        table.borderradius, table.borderradius td{
+            border-radius: 10px;
+        }
+        .fixcellameret td {
+            border-color: orange;
+            width: 60px;
+            height: 60px;
+            border-width: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Coming soon...</h1>
+    <h1>HTML Tables</h1>
+    <div class="alfejezet">
+        <h2>Alapok</h2>
+        <section>
+            <h3>Alap szerkezet</h3>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="alfejezet">    
+        <h2>Táblázatok keretezése</h2>
+        <section>
+            <h3>Alap keret</h3>
+            <table class="keret">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Cellák keretezése</h3>
+            <table class="cellakeretezett">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Táblázat és cellák keretezése</h3>
+            <table class="keret cellakeretezett">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Cellák keretezése, dupla vonalazás nélkül</h3>
+            <table class="cellakeretezett egyvonalas">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>border-radius</h3>
+            <table class="borderradius keret cellakeretezett">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>border-style</h3>
+            <table class="keret cellakeretezett fixcellameret">
+                <tr>
+                    <td style="border-style: dotted"></td>
+                    <td style="border-style: dashed"></td>
+                    <td style="border-style: solid"></td>
+                </tr>
+                <tr>
+                    <td style="border-style: double"></td>
+                    <td style="border-style: groove"></td>
+                    <td style="border-style: ridge"></td>
+                </tr>
+                <tr>
+                    <td style="border-style: inset"></td>
+                    <td style="border-style: outset"></td>
+                    <td style="border-style: hidden"></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="alfejezet">
+        <h2>Táblázatok méretezése</h2>
+        <section>
+            <table style="height: 100px; width: 100px;" class="keret cellakeretezett">
+                <tr>
+                    <td style="width: 0%;">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr style="height: 100%;">
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="alfejezet">
+        <h2>Fejlécek</h2>
+        <section>
+            <h3>Alapesetben</h3>
+            <table style="width: 150px;" class="keret cellakeretezett egyvonalas">
+                <tr>
+                    <th>H1</th>
+                    <th>H2</th>
+                    <th>H3</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>colspan</h3>
+            <p style="text-align: center;">A colspan egy HTML attribútum, nem CSS!</p>
+            <table style="width: 150px;" class="keret cellakeretezett egyvonalas">
+                <tr>
+                    <th colspan="2">H1</th>
+                    <th>H2</th> 
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table style="width: 90%; margin: 5;" class="keret cellakeretezett egyvonalas">
+                <tr>
+                    <th style="min-width: 20px; border-top: hidden; border-left: hidden;"></th>
+                    <th style="width: 20%;">Hétfő</th>
+                    <th style="width: 20%;">Kedd</th>
+                    <th style="width: 20%;">Szerda</th>
+                    <th style="width: 20%;">Csütörtök</th>
+                    <th style="width: 20%;">Péntek</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+    </div>
 </body>
 </html>
